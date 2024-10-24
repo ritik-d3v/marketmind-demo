@@ -1,0 +1,96 @@
+{
+  "name": "marketmind-webapp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start:dev": "dotenv -e .env.development vite",
+    "start:prod": "dotenv -e .env.production vite",
+    "build": "tsc && vite build",
+    "build:develop": "tsc && vite build --mode development",
+    "build:dev": "env-cmd -f .env.development yarn build && firebase deploy -P caramel-caster-422919-t0",
+    "build:prod": "tsc && vite build --mode production",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
+    "preview": "vite preview",
+    "prettier": "prettier --write   \"./**/*.{css,js,json,scss,ts,tsx,jsx,md}\" --config ./.prettierrc",
+    "format": "yarn prettier && yarn lint:fix --max-warnings 0"
+  },
+  "dependencies": {
+    "@react-pdf-viewer/core": "3.12.0",
+    "@react-pdf-viewer/highlight": "^3.12.0",
+    "@react-pdf-viewer/scroll-mode": "^3.12.0",
+    "@react-pdf-viewer/search": "^3.12.0",
+    "@react-pdf-viewer/toolbar": "^3.12.0",
+    "@tailwindcss/forms": "^0.5.7",
+    "@uiw/react-color": "^2.1.1",
+    "@uiw/react-color-swatch": "^2.1.1",
+    "apexcharts": "^3.48.0",
+    "axios": "^1.6.8",
+    "date-fns": "^3.6.0",
+    "dotenv-cli": "^7.4.1",
+    "firebase": "^10.11.0",
+    "lodash": "^4.17.21",
+    "marked": "^12.0.2",
+    "pdfjs-dist": "3.4.120",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.1",
+    "react-datepicker": "^6.9.0",
+    "react-dom": "^18.2.0",
+    "react-gauge-chart": "^0.4.1",
+    "react-html-parser": "^2.0.2",
+    "react-router-dom": "^6.22.3",
+    "react-simple-maps": "^3.0.0",
+    "react-tiny-popover": "^8.0.4",
+    "react-typed": "^2.0.12"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.13",
+    "@types/react": "^18.2.66",
+    "@types/react-datepicker": "^6.2.0",
+    "@types/react-dom": "^18.2.22",
+    "@types/react-gauge-chart": "^0.4.3",
+    "@types/react-html-parser": "^2.0.6",
+    "@types/react-simple-maps": "^3.0.4",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.19",
+    "env-cmd": "^10.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "husky": "4",
+    "lint-staged": "^15.2.2",
+    "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-svgr": "^4.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "yarn format",
+      "yarn lint"
+    ]
+  },
+  "resolutions": {
+    "strip-ansi": "6.0.1",
+    "string-width": "4.2.2",
+    "wrap-ansi": "7.0.0"
+  }
+}

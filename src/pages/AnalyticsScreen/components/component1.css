@@ -1,0 +1,55 @@
+.analytics ::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+.analytics ::-webkit-scrollbar-track {
+  background: #0a2537; /* color of the tracking area */
+}
+
+.analytics ::-webkit-scrollbar-thumb {
+  background-color: #e5e5e5; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 2px solid #e5e5e5; /* creates padding around scroll thumb */
+}
+
+.analytics .apexcharts-legend {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.analytics .apexcharts-legend-series {
+  display: flex !important;
+  flex-direction: row-reverse;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.analytics .toggle-switch-inner:after {
+  content: attr(data-no);
+  background-color: #0a2435;
+  color: #d4e2eb;
+}
+
+.analytics .filter_dropdown {
+  left: -100px;
+  top: 48px;
+}
+
+.user_modal ::-webkit-scrollbar-track {
+  background: #ecf2f3; /* color of the tracking area */
+}
+
+.user_modal ::-webkit-scrollbar-thumb {
+  background-color: #cde1e7; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 2px solid #cde1e7; /* creates padding around scroll thumb */
+}
+
+@media (min-width: 1440px) {
+  .analytics .filter_dropdown {
+    right: 0;
+    top: 64px;
+    left: auto;
+  }
+}

@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-blue: '#E3EDF0';
+    --btn-green: '#62C55D';
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+pre {
+  white-space: initial;
+}

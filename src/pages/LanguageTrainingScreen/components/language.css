@@ -1,0 +1,17 @@
+.wrapper2 {
+  position: relative;
+}
+
+.wrapper2::before {
+  content: url('../assets/icons/dropdown2.svg');
+  font-size: 0.8rem;
+  pointer-events: none; /* ▼ click triggers dropdown */
+  position: absolute;
+  left: 12px;
+  top: 18px;
+  z-index: 1;
+}
+
+.graph::-webkit-scrollbar {
+  height: 3px;
+}
